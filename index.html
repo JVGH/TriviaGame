@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding for Unicode -->
+    <meta charset="utf-8">
+    <!-- IE Edge Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Size Based on Devices w/ 100% Zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon(s) -->
+    <link rel='icon' href="./assets/img/favicon.ico">
+    <!-- Site Title -->
+    <title>My Trivia Game</title>
+    <!-- Author of This Page -->
+    <meta name="author" content="Jim">
+    <!-- Site Description -->
+    <meta name="description" content="Jim's Trivia">
+
+    <!-- CSS -->
+    <!-- RESET Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Totally Trivial Trivia</h1>
+                <p class="lead text-muted">Test your knowledge on Social Media Apps</p>
+                <button class="btn btn-outline-success" id="startGame">Start</button>
+            </div>
+        </div>
+    </header>
+    <main id="mainContent" role="main">
+        <div class="container">
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Direction :</strong> Select an answer from below choices before the clock runs out.
+            </div>
+
+            <div class="card text-center text-dark bg-light mb-3">
+                <div class="card-header">
+                    <div class="row d-flex justify-content-center align-items-stretch text-center" id="questionRow">
+                        <p id="question"></p>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="row justify-content-center text-center text-white">
+                        <div class="col-md-5 col-sm-12 ans-option ans-option-hover bg-dark" id="opt-one" data-indx="0">
+                        </div>
+                        <div class="col-md-5 col-sm-12 ans-option ans-option-hover bg-dark" id="opt-two" data-indx="1">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center text-center text-white">
+                        <div class="col-md-5 col-sm-12 ans-option ans-option-hover bg-dark" id="opt-three" data-indx="2">
+                        </div>
+                        <div class="col-md-5 col-sm-12 ans-option ans-option-hover bg-dark" id="opt-four" data-indx="3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer" id="progress">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="30" aria-valuemin="0" aria-valuemax="30">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse">
+                        <div class="p-2">
+                            <p class="d-inline-block text-muted mb-0" id="currentQuestionNum"></p>
+                            <p class="d-inline-block text-muted mb-0"> of </p>
+                            <p class="d-inline-block text-muted mb-0" id="totalQuestionNum"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-secondary  mt-3">
+                <div class="row d-flex justify-content-center align-items-stretch text-center">
+                    <div class="col-sm-3 text-center text-success">
+                        <div class="row d-block"><strong>Total Correct</strong></div>
+                        <div class="row d-block" id="totalCorrect"></div>
+                    </div>
+                    <div class="col-sm-3 text-center text-danger">
+                        <div class="row d-block"><strong>Total Incorrect</strong></div>
+                        <div class="row d-block" id="totalIncorrect"></div>
+                    </div>
+                    <div class="col-sm-3 text-center text-warning">
+                        <div class="row d-block"><strong>Total Unanswered</strong></div>
+                        <div class="row d-block" id="totalUnanswered"></div>
+                    </div>
+                    <div class="col-sm-3 text-center text-info">
+                        <div class="row d-block"><strong>Total Elapsed Time</strong></div>
+                        <div class="row d-block" id="totalTime"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">Copyright &copy;</span>
+        </div>
+    </footer>
+
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JQuery JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/game.js"></script>
+</body>
+
+</html>
